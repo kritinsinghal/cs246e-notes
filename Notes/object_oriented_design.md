@@ -88,7 +88,7 @@ If you need true shared ownership - we'll see later.
     - **High:**
         - Modules access each other's implementation (friends)
     - I can achieve perfect coupling by putting everything in one class, so there must be a balancing force
-- **Cohesian**
+- **Cohesion**
     - How closely are the elements of a module related to each other
     - **Low:**
         - Arbitrary grouping (eg. `<utility>`)
@@ -98,15 +98,15 @@ If you need true shared ownership - we'll see later.
         - Elements pass data to each other
     - **High:**
         - elements operate to perform exactly one task
-    - I can achieve perfect cohesian by putting each method into its own class, but then they'll all depend on each other (high coupling).
+    - I can achieve perfect cohesion by putting each method into its own class, but then they'll all depend on each other (high coupling).
 
 - **High coupling**
     - Changes to a module affect other modules
     - Harder to reuse individual modules
     - Ex. `function whatIsIt(dynamic_cast)` tightly coupled to the `Book` hierachy, must change this function if you create another `Book` subclass
-- **Low Cohesian**
+- **Low Cohesion**
     - Poor organized code, hard to understand and maintain
-- We want high cohesian and low coupling
+- We want high cohesion and low coupling
 
 ## SOLID principles of OO Design
 - **Single Responsibility Principle (SRP)**
@@ -132,7 +132,7 @@ If you need true shared ownership - we'll see later.
             - Strategy
             - Interface
             - Etc.
-        - Low cohesian
+        - Low cohesion
         - Split these up
         - One modules (not main! can't reuse main) responsible for comunnication
             - If a class wants to say something, do it via parameters/results/exceptions
